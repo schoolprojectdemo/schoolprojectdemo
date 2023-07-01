@@ -1,0 +1,66 @@
+html{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(231, 231, 233);
+}
+#divForm{
+    background-color: white;
+    padding: 25px;
+    line-height: 2;
+    border-radius: 5px;
+    border-style: none;
+    margin-top: 20%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+button{
+    background-color: blue;
+    color:white;
+    padding:10px 85px;
+    border-style: none;
+    border-radius: 2px;
+    font-size: 14px;
+}
+form{
+    padding:15px;
+}
+#regId{
+    padding: 10px 11px;
+}
+#standard{
+    padding: 10px 75px;
+}
+p{
+    text-align: center;
+    font-size: 23px;
+    font-weight: 1000;
+    font-style: bold;
+    letter-spacing: 1px;
+    margin-top: 90px;
+}
+hr{
+    width: 30%;
+    height:1px;
+}
+#load{
+    text-align: center;
+    animation: rotation 2s infinite linear;
+    position: relative;
+    display: none;
+    left:105px;
+    top:50px;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+@keyframes animation{
+    0%{
+        transform: scale(0,0);
+    }100%{
+        transform: scale(1,1);
+    }
+}

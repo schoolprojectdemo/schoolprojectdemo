@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        html{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+            background-color: white;
+        }
+        img{
+            width:300px;
+            margin-top:170px;
+            animation-name: animation;
+            animation-duration: 5s;
+        }
+        #load{
+            text-align: center;
+            animation: rotation 2s infinite linear;
+        }
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+        }
+        @keyframes animation{
+            0%{
+                transform: scale(0,0);
+            }100%{
+                transform: scale(1,1);
+            }
+        }
+        @media screen and (max-width:400px){
+            img{
+                margin-top: 240px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="schoolLogo.jpg" alt="Logo"><br>
+    <svg xmlns="http://www.w3.org/2000/svg" id="load" height="3em" viewBox="0 0 512 512"><style>svg{fill:#001ced}</style><path d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"/></svg>
+    <script>
+        let load = document.getElementById("load");
+        
+        setTimeout(()=>{
+           location.replace("login.html");
+        },8000)
+        //#615CBB
+    </script>
+</body>
+</html>

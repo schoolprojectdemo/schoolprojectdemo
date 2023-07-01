@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        html{
+            text-align: center;
+            background-color: white;
+            color:black;
+        }
+        .description{
+            font-size: 12px;
+            color:rgb(47, 46, 46)
+        }
+    </style>  
+    <title>Analytics</title>
+</head>
+<body>
+    <p>Student Test Performance Graph(2023)<p>
+    <p class="description">X-axis(Test conducted Periodically)</p>
+    <p class="description">Y-axis(Marks scored in Test)</p>
+    <canvas id="myChart" style="width:100%;max-width:400px"></canvas>
+    <hr>
+    <br>
+    <p>Student Subject Performance Chart(2023)<p></p>
+    <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+    <hr>
+    <br>
+    <p>Student Strength Chart<p></p>
+    <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+    <hr>
+    <br>
+    <p>Student Focus Area<p></p>
+    <div id="myChart3" style="width:100%; max-width:800px; height:500px;"></div>
+
+    <script>
+        const xValues = [1,2,3,4,5,6,7,8,9,10,11,12];
+        const yValues = [60,70,80,85,97,83,84,49,66,75,84,79];
+        
+        new Chart("myChart", {
+          type: "line",
+          data: {
+            labels: xValues,
+            datasets: [{
+              fill: false,
+              lineTension: 0,
+              backgroundColor: "rgba(0,0,255,1.0)",
+              borderColor: "rgba(0,0,255,0.1)",
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {display: false},
+            
+          }
+        });
+
+        const xValues1 = [100,200,300,400,500,600,700,800,900,1000];
+
+        new Chart("myChart1", {
+        type: "line",
+        data: {
+            labels: xValues1,
+            datasets: [{ 
+            data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+            borderColor: "red",
+            fill: false
+            }, { 
+            data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+            borderColor: "green",
+            fill: false
+            }, { 
+            data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+            borderColor: "blue",
+            fill: false
+            }]
+        },
+        options: {
+            legend: {display: false}
+        }
+        });
+
+        var xValues2 = ["Italy", "France", "Spain", "USA", "Argentina"];
+        var yValues2 = [55, 49, 44, 24, 35];
+        var barColors = ["red", "green","blue","orange","brown"];
+
+        new Chart("myChart2", {
+        type: "bar",
+        data: {
+            labels: xValues2,
+            datasets: [{
+            backgroundColor: barColors,
+            data: yValues2
+            }]
+        },
+        options: {
+            legend: {display: false},
+            title: {
+            display: true,
+            text: "World Wine Production 2018"
+            }
+        }
+        });
+
+        
+
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+        const data = google.visualization.arrayToDataTable([
+        ['Contry', 'Mhl'],
+        ['Italy',54.8],
+        ['France',48.6],
+        ['Spain',44.4],
+        ['USA',23.9],
+        ['Argentina',14.5]
+        ]);
+
+        const options = {
+        title:'World Wide Wine Production',
+        is3D:true
+        };
+
+        const chart = new google.visualization.PieChart(document.getElementById('myChart3'));
+        chart.draw(data, options);
+        }
+
+    </script>
+</body>
+</html>

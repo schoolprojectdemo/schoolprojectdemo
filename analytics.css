@@ -1,0 +1,46 @@
+html{
+    text-align: center;
+    background-color: white;
+    color:black;
+}
+.description{
+    font-size: 12px;
+}
+#header{
+    padding:10px;
+    position: fixed;
+    top:-5px;
+    left:0px;
+    background-color: rgb(1, 1, 30);
+    width:100%;
+    color:white;
+    height: 50px;
+}
+i{
+    float:right;
+    margin-right:50px;
+    position: relative;
+    bottom:30px; 
+}
+#header p{
+    text-align: left;
+    padding-left:10px;
+}
+#studentPic{
+    border-radius: 50%;
+}
+#studentOtherDetail{
+    text-align: left;
+    padding-left: 15px;
+}
+mark{
+    background-color: white;
+    color:green;
+    font-weight: 500;
+}
+.markOne{
+    background-color: white;
+    color:black;
+    font-family: bold;
+    font-weight: 800;
+}

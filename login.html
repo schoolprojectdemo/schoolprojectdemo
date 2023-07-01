@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <p>Login</p>
+    <hr>
+    <div id="divForm">
+        <form autocomplete="off">
+            <label for="regId">Reg Id</label><br>
+            <input type="text" placeholder="Enter the ID" id="regId"><br>
+            <label for="standard">Select the Standard</label><br>
+            <select id="standard">
+                <option value="I">I</option>
+                <option value="II">II</option>
+                <option value="III">III</option>
+                <option value="IV">IV</option>
+                <option value="V">V</option>
+                <option value="VI">VI</option>
+                <option value="VII">VII</option>
+                <option value="VIII">VIII</option>
+                <option value="IX">IX</option>
+                <option value="X">X</option>
+                <option value="XI">XI</option>
+                <option value="XII">XII</option>
+            </select><br><br>
+            <button type="button" id="submitBtn">Next</button>
+        </form>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" id="load" height="3em" viewBox="0 0 512 512"><style>svg{fill:#001ced}</style><path d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"/></svg>
+    <script>
+        let submitBtn = document.getElementById("submitBtn");
+        submitBtn.addEventListener('click',()=>{
+            location.replace("analytics.html");
+            let load = document.getElementById("load");
+            load.style.display="block";
+        });
+    </script>
+</body>
+</html>
